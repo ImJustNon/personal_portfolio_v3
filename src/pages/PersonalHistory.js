@@ -22,7 +22,7 @@ function PersonalHistory({ language }){
     // }, []);
 
     useEffect(() =>{
-        fetch("https://portfolio-api-service.vercel.app/api/v1/selfinformations/all").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/selfinformations/all").then(response => response.json()).then(response =>{
             setPersonalInfoMyself(response.data.me);
             setPersonalInfoDad(response.data.dad);
             setPersonalInfoMom(response.data.mom);

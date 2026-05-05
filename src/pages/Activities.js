@@ -38,12 +38,12 @@ function Activities({ language }){
     // }, []);
 
     useEffect(() =>{
-        fetch("https://portfolio-api-service.vercel.app/api/v1/activities/all").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/activities/all").then(response => response.json()).then(response =>{
             setActivitiesData_VocationalCertificate(response.data.vocational_certificate_1st_year ?? []);
             setActivitiesData_VocationalCertificate_2(response.data.vocational_certificate_2nd_year ?? []);
             setActivitiesData_VocationalCertificate_3(response.data.vocational_certificate_3rd_year ?? []);
         });
-        fetch("https://portfolio-api-service.vercel.app/api/v1/activities/banners/all").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/activities/banners/all").then(response => response.json()).then(response =>{
             setActivitiesData_Banners_V2(response.data.v2  ?? []);
         });
     }, []);

@@ -22,7 +22,7 @@ function Certificates({ language }){
     // }, []);
 
     useEffect(() =>{
-        fetch("https://portfolio-api-service.vercel.app/api/v1/certificates/all").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/certificates/all").then(response => response.json()).then(response =>{
             console.log(response);
             setCertificateData_VocationalCertificate_3(response.data.vocational_certificate_3rd_year);
             setCertificateData_VocationalCertificate_2(response.data.vocational_certificate_2nd_year);

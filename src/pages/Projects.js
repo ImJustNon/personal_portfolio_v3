@@ -15,7 +15,7 @@ function Projects({ language }){
     const [ProjectsData_VocationalCertificate_3, setProjectsData_VocationalCertificate_3] = useState([]);
 
     useEffect(() =>{
-        fetch("https://portfolio-api-service.vercel.app/api/v1/projects/all").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/projects/all").then(response => response.json()).then(response =>{
             setProjectsData_M3(response.data.proj_m_3);
             setProjectsData_VocationalCertificate(response.data.vocational_certificate_1st_year);
             setProjectsData_VocationalCertificate_2(response.data.vocational_certificate_2nd_year);

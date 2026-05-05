@@ -32,12 +32,12 @@ function Home({ language }){
 
     useEffect(() =>{
         // language stacks
-        fetch("https://portfolio-api-service.vercel.app/api/v1/stacks/bycategory/languages").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/stacks/bycategory/languages").then(response => response.json()).then(response =>{
             if(response.status === "OK"){
                 setStackLanguage(response.data);
             }
         }); 
-        fetch("https://portfolio-api-service.vercel.app/api/v1/stacks/bycategory/frameworks").then(response => response.json()).then(response =>{
+        fetch("https://api-portfolio.aboutnon.in.th/api/v1/stacks/bycategory/frameworks").then(response => response.json()).then(response =>{
             if(response.status === "OK"){
                 setStackFramework(response.data);
             }

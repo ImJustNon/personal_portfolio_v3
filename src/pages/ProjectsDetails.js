@@ -26,7 +26,7 @@ function ProjectsDetails(){
     const currentLanguage = i18n.language;
 
     useEffect(() =>{
-        fetch(`https://portfolio-api-service.vercel.app/api/v1/projects/byid/${id}`).then(response => response.json()).then(response =>{
+        fetch(`https://api-portfolio.aboutnon.in.th/api/v1/projects/byid/${id}`).then(response => response.json()).then(response =>{
             if(response.status === "FAIL" || response.data?.length === 0){
                 setProjectDetailsData(false);
                 document.title = "404: This page could not be found";
